@@ -386,3 +386,81 @@ body.darkmode .conteudo section ul li a:hover {
   background-image: url('youtube-icon.png');
 }
 */
+
+.conteudo form {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.conteudo .form-group {
+  margin-bottom: 15px;
+}
+
+.conteudo label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: bold;
+}
+
+.conteudo input[type="text"],
+.conteudo input[type="email"],
+.conteudo textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.conteudo textarea {
+  resize: vertical;
+}
+
+.conteudo .btn-primary {
+  background-color: #6a4c93;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.conteudo .btn-primary:hover {
+  background-color: #5a189a;
+}
+
+body.darkmode .conteudo form {
+  background-color: #2a486a;
+  color: #f1faee;
+  box-shadow: 0 1px 3px rgba(255, 255, 255, 0.05);
+}
+
+body.darkmode .conteudo label {
+  color: #f1faee;
+}
+
+body.darkmode .conteudo input[type="text"],
+body.darkmode .conteudo input[type="email"],
+body.darkmode .conteudo textarea {
+  background-color: #1d3557;
+  color: #f1faee;
+  border-color: #457b9d;
+}
+
+body.darkmode .conteudo .btn-primary {
+  background-color: #457b9d;
+  color: #f1faee;
+}
+
+body.darkmode .conteudo .btn-primary:hover {
+  background-color: #1d3557;
+}
