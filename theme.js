@@ -1,9 +1,9 @@
 // Alterna o tema e salva no localStorage
 function alternarTema() {
-  document.body.classList.toggle('darkmode');
+  document.body.classList.toggle('darkmode');
 
-  const temaAtual = document.body.classList.contains('darkmode') ? 'dark' : 'light';
-  localStorage.setItem('tema', temaAtual);
+  const temaAtual = document.body.classList.contains('darkmode') ? 'dark' : 'light';
+  localStorage.setItem('tema', temaAtual);
 }
 
 // Marcar a pagina selecionada
@@ -72,7 +72,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   document.addEventListener('keydown', function(event) {
     const keyPressed = parseInt(event.key);
-    if (!isNaN(keyPressed) && keyPressed > 0 && keyPressed <= sidebarLinks.length) {
+    // Verifica se o foco NÃO está em um input ou textarea
+    if (!isNaN(keyPressed) && keyPressed > 0 && keyPressed <= sidebarLinks.length &&
+        document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
       const indexToActivate = keyPressed - 1; // Ajusta para o índice baseado em 0
       // Simula o clique no link correspondente
       sidebarLinks[indexToActivate].click();
